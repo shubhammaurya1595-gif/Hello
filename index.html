@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +20,7 @@
             flex-direction: column;
             transition: all 0.3s ease;
         }
+
         h1 {
             color: #ff6347;
             font-size: 3rem;
@@ -26,11 +28,13 @@
             margin-bottom: 20px;
             animation: fadeIn 1.5s ease-out;
         }
+
         p {
             font-size: 1.25rem;
             color: #555;
             font-weight: 500;
         }
+
         .container {
             padding: 20px;
             background-color: white;
@@ -40,7 +44,7 @@
             max-width: 500px;
             animation: slideUp 1s ease-out;
         }
-        
+
         .modal {
             display: none;
             position: fixed;
@@ -52,6 +56,7 @@
             justify-content: center;
             align-items: center;
         }
+
         .modal-content {
             background-color: white;
             padding: 30px;
@@ -61,6 +66,7 @@
             max-width: 400px;
             width: 100%;
         }
+
         input {
             padding: 10px;
             width: 100%;
@@ -69,6 +75,7 @@
             border-radius: 8px;
             font-size: 1rem;
         }
+
         button {
             padding: 12px 20px;
             background-color: #ff6347;
@@ -79,75 +86,66 @@
             cursor: pointer;
             margin-top: 15px;
         }
+
         button:hover {
             background-color: #e55347;
         }
 
         @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
         }
+
         @keyframes slideUp {
-            0% { transform: translateY(20px); opacity: 0; }
-            100% { transform: translateY(0); opacity: 1; }
+            0% {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
 
         /* --------- Responsive Design --------- */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.2rem;
-    }
+        @media (max-width: 768px) {
+            .modal-content {
+                background-color: white;
+                padding: 30px;
+                border-radius: 12px;
+                text-align: center;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+                max-width: 400px;
+                width: 60%;
+            }
 
-    p {
-        font-size: 1.1rem;
-    }
+            .container {
+                padding: 20px;
+                background-color: white;
+                border-radius: 12px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                width: 80%;
+                /* max-width: 700px; */
+                animation: slideUp 1s ease-out;
+            }
 
-    .container {
-        padding: 15px;
-        max-width: 90%;
-    }
+            .container h1 {
+                font-size: 28px;
+            }
 
-    .modal-content {
-        padding: 20px;
-        max-width: 90%;
-    }
-
-    input {
-        font-size: 0.95rem;
-    }
-
-    button {
-        font-size: 0.95rem;
-        padding: 10px 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-
-    .modal-content h2 {
-        font-size: 1.3rem;
-    }
-
-    input {
-        font-size: 0.9rem;
-    }
-
-    button {
-        font-size: 0.9rem;
-        padding: 10px 14px;
-    }
-
-    .modal-content
-
+            .container p {
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>Welcome to My Page!</h1>
@@ -165,7 +163,7 @@
 
     <script>
         // Show the modal when the page loads
-        window.onload = function() {
+        window.onload = function () {
             document.getElementById("nameModal").style.display = "flex";
         }
 
@@ -181,5 +179,5 @@
         }
     </script>
 </body>
-</html>
 
+</html>
